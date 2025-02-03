@@ -9,11 +9,11 @@
             string sentence = "\nStudent Registration Form\n";
 
             Console.WriteLine(sentence);
-            Console.WriteLine("Enter first name: ");
+            Console.Write("Enter first name: ");
             string fname = Console.ReadLine();
-            Console.WriteLine("Enter last name: ");
+            Console.Write("Enter last name: ");
             string lname = Console.ReadLine();
-            Console.WriteLine("Enter year of birth: ");
+            Console.Write("Enter year of birth: ");
             string birthy = Console.ReadLine();
             string welcome = "\nWelcome " + fname + " " + lname + "!" + "\nYour registration is complete." + "\nYour temporary password is: " + fname + "*" + birthy;
             Console.WriteLine(welcome);
