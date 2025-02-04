@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Keep the change! Ya filthy animal!!!");
 
-            Console.WriteLine("Welcome to the Change Calculator");
+            Console.WriteLine("\nWelcome to the Change Calculator");
 
             string choice = "y";
             while (choice.ToLower() == "y")
