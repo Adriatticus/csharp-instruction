@@ -8,7 +8,7 @@
             Console.WriteLine("\nWelcome to the Letter Grade Converter");
 
             string choice = "y";
-            while (choice == "y" || choice == "Y") // || means 'or'
+            while (choice == "y" || choice == "Y") // || means 'or' //can do choice.ToLower() == y
             {
                 Console.Write("\nEnter numerical grade: ");
                 int grade = Convert.ToInt32(Console.ReadLine());

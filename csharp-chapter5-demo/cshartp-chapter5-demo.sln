@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cshartp-chapter5-demo", "cshartp-chapter5-demo.csproj", "{FE596450-A83F-4DC9-87D0-82555124DD66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE596450-A83F-4DC9-87D0-82555124DD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE596450-A83F-4DC9-87D0-82555124DD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE596450-A83F-4DC9-87D0-82555124DD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE596450-A83F-4DC9-87D0-82555124DD66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20C3CF28-812C-4DAA-A612-D0CD9270646F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+﻿Build started...
+1>------ Build started: Project: ConsoleDemo, Configuration: Debug Any CPU ------
+1>ConsoleDemo -> C:\repos\git-repos\consoleapp\ConsoleDemo\ConsoleDemo\bin\Debug\net6.0\ConsoleDemo.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

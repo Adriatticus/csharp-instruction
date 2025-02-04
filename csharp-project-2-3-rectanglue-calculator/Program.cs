@@ -14,9 +14,9 @@ namespace csharp_project_2_3_rectanglue_calculator
             while (choice == "y" || choice == "Y") // || means 'or'
             {
                 Console.Write("\nEnter length: ");
-                decimal length = Convert.ToDecimal(Console.ReadLine());
+                double length = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Enter width: ");
-                decimal width = Convert.ToDecimal(Console.ReadLine());
+                double width = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Area: " + (width * length));
                 Console.Write("\nPerimeter: " + ((2 * width) + (2 * length)));
 
@@ -24,6 +24,11 @@ namespace csharp_project_2_3_rectanglue_calculator
                 choice = Console.ReadLine();
             }
             Console.WriteLine("\nCalculations complete.");
+
+            //create and area variable
+            // double area = length * width;
+            // double perimeter = 2 * length + 2 * width;
+            // Console.writeline = "Area: "+ Area ( then do the same for perimiter)
         }
     }
 }
