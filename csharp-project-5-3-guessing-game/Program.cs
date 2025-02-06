@@ -18,7 +18,6 @@ namespace csharp_project_5_3_guessing_game
 
                 Random ranNum = new Random();
                 Console.WriteLine(ranNum.Next(0, 100));
-
                 Print("I'm thinking of a number from 1 to 100.\nTry to guess it.");
                 bool successvalidguess = false;
                 while (!successvalidguess)
