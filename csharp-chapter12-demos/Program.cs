@@ -7,7 +7,8 @@
         {
             Console.WriteLine("We're eating layers of cake brother!");
 
-            //Movie newMovie= new Movie();
+
+            Movie newMovie= new Movie();
             newMovie.Id = 1;
             newMovie.Title = "Jurassic Park";
             newMovie.Year = 2025;
@@ -21,19 +22,25 @@
             string choice = "y";
             while (choice == "y")
             {
-            // capture input for properties of a movie
-            int id = PromptInt("Movie ID: ");
-            string title = PromptString("Movie Title: ");
-            int year = PromptInt("Year: ");
-            string ageRating = PromptString("Age Rating: ");
-            string director = PromptString("Director: ");
-            Movie newMovie = new Movie(id, title, year, ageRating,director);
-            //Movies.Add(newMovie);
-            // store this movie and capture a new one
+                // capture input for properties of a movie
+                int id = PromptInt("Movie ID: ");
+                string title = PromptString("Movie Title: ");
+                int year = PromptInt("Year: ");
+                string ageRating = PromptString("Age Rating: ");
+                string director = PromptString("Director: ");
+                Movie newMovie1 = new Movie(id, title, year, ageRating,director);
+                Movies.Add(newMovie1);
+                // store this movie and capture a new one
                 choice = PromptString("Add another movie? (y/n): ");
             }
 
-           // Movie newMovie = new Movie();
+            MyConsole.PrintL("=========== MOVIES ==============");
+            foreach (Movie movie in Movies)
+            {
+                MyConsole.PrintL(movie.ToString());
+            }
+
+            // Movie newMovie = new Movie();
             // p. 376 read encapsulation - read 377 - super understand class
 
 

@@ -40,7 +40,7 @@ namespace csharp_project_4_1_table_of_powers
 
             }
 
-            Console.WriteLine("My the table of powers grant you strength");
+            Console.WriteLine("May the table of powers grant you strength");
         }
 
         private static void PrintPowers(int IntE)
