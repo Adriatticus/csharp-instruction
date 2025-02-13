@@ -1,4 +1,6 @@
-﻿using ConsoleLibrary;
+﻿
+
+using ConsoleLibrary;
 
 namespace csharp_project_10_2_person_manager
 {
@@ -6,8 +8,8 @@ namespace csharp_project_10_2_person_manager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, People! Prepar to be managed!\n");
-
+            Console.WriteLine("Hello, People! Prepare to be managed!\n");
+            
             MyConsole.PrintL("Welcome to the Person Manager");
 
             string choice = "y";
