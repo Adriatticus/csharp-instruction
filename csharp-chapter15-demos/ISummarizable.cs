@@ -2,12 +2,6 @@
 {
     internal interface ISummarizable
     {
-
         string GetSummaryDetails();
-
-
-
-
-
     }
 }
