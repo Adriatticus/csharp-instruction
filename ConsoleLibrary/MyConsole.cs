@@ -35,7 +35,7 @@ namespace ConsoleLibrary
             Console.Write(msg);
         }
 
-        public static void PrintL(string msg)
+        public static void PrintL(string msg = "")
         {
             Console.WriteLine(msg);
         }
