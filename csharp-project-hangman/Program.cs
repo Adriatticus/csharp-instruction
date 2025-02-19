@@ -1,10 +1,12 @@
 ﻿using ConsoleLibrary;
+using csharp_project_hangman.Model;
 
 namespace csharp_project_hangman
 {
     internal class Program
     {
-        string[] images = new string[7];
+        static List<HangmanWords> hangmanWord = new List<HangmanWords>();
+        static string[] images = new string[7];
 
         static void Main(string[] args)
         {
@@ -12,158 +14,27 @@ namespace csharp_project_hangman
 
             PopulateImages();
 
-            //for (int i = 0; images.Length; i++)
+            string choice = "y";
+            while (choice == "y")
+            {
+
+            }
+            choice = MyConsole.PromptStrInRange("Play another round? (y/n)", "y", "n");
+              
+            string guess = MyConsole.PromptString("Guess a letter: ");
+            int count = 0 ;
+            int incorrectGuesses = 0;
+
+            //for (int i = 0; i < images.Length; i++)
             //{
 
             //}
 
-            // string hangedMan0 =
+            string howMuchMan = GetHangedManImage(6);
+            MyConsole.PrintL(howMuchMan);
 
-            //"""
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             
-            //         |             
-            //         |           
-            //         |          
-            //         |          
-            //         |          
-            //         |                
-            //         |               
-            //         |      
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-            // Console.WriteLine(hangedMan0);
-            // MyConsole.PrintL("\nHanged man? Can you hear me?\n...");
-
-            // string hangedMan1 =
-
-            //"""
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ 0 0
-            //         |              \_c/
-            //         |              
-            //         |             
-            //         |             
-            //         |                
-            //         |               
-            //         |             
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-
-            // string hangedMan2 =
-
-            // """
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ 0 0
-            //         |             /\_c/_
-            //         |             |__|_| 
-            //         |             |____|
-            //         |          
-            //         |                
-            //         |               
-            //         |             
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-            // string hangedMan3 =
-
-            // """
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ 0 0
-            //         |           __/\_c/_
-            //         |          / /|__|_|
-            //         |          | ||____|
-            //         |          |_>
-            //         |                
-            //         |             
-            //         |             
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-
-            // string hangedMan4 =
-
-            // """
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ 0 0
-            //         |           __/\_c/_
-            //         |          / /|__|_| \
-            //         |          | ||____|\ |
-            //         |          |_>      <_|
-            //         |                
-            //         |               
-            //         |             
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-
-            // string hangedMan5 =
-
-            // """
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ 0 x
-            //         |           __/\_c/_
-            //         |          / /|__|_| \
-            //         |          | ||____|\ |
-            //         |          |_>|  _ |<_|
-            //         |             |  |    
-            //         |             |  |  
-            //         |             (___)
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-
-            // string hangedMan6 =
-
-            // """
-            //     ______________________
-            //        \|/            |
-            //         |             |
-            //         |             WWWWW
-            //         |             @ x x
-            //         |           __/\_c/_
-            //         |          / /|__|_| \
-            //         |          | ||____|\ |
-            //         |          |_>|  _ |<_|
-            //         |             |  | |   
-            //         |             |  | |
-            //         |             (___)__)
-            //        /|\
-            //     __/_|_\____________________
-            //     |                         |
-            // """;
-
-            //private static string GetHangedManImage (int incorrectGuessses)
-            //{
-            //    string[] images = { "a", "b", "c" };
-            //    return images[0];
-            //
-            PopulateImages();
+            
+           
         }
 
         
