@@ -9,7 +9,11 @@ namespace cshap_project_lists_reps1
         {
             Console.WriteLine("Protien!\n");
 
+
             List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            PrintIntList(numbers);
+
+            MyConsole.PrintL("");
 
             // int doubleNumbers = make a new list that is every number in the list times 2
 
@@ -18,10 +22,7 @@ namespace cshap_project_lists_reps1
             {
                 doubleNumbers.Add(var * 2);
             }
-            foreach (int var in doubleNumbers)
-            {
-                MyConsole.Print($"{var.ToString()}, ");
-            }
+            PrintIntList(doubleNumbers);
 
             MyConsole.PrintL("");
 
@@ -33,39 +34,39 @@ namespace cshap_project_lists_reps1
                 {
                     evenNumbers.Add(var);
                 }
-                
             }
-            foreach (int var in evenNumbers)
-            {
-                MyConsole.Print($"{var.ToString()}, ");
-            }
+            PrintIntList(evenNumbers);
+            
 
             MyConsole.PrintL("");
 
             List<string> names = new List<string>() {"jim", "nick", "andy", "christian", "adiran", "sean", "celina", "joe", "heath"};
+            PrintList(names);
+
+            int stringLength = (names.Count());
+            MyConsole.PrintL(stringLength.ToString());
+
+            MyConsole.PrintL("");
 
             List<string> titleNames = new List<string>();
             foreach (string name in names)
             {
                 titleNames.Add(Titlize(name));
+                
             }
-            foreach(string name in titleNames)
-            {
-                MyConsole.Print($"{name}, ");
-         
-            }
+            PrintList(titleNames);
 
             MyConsole.PrintL("");
 
-            List <string> filteredNames = new List<string>();
+            List<string> filteredNames = new List<string>();
             foreach (string name in titleNames)
             {
+                if (FilterAC(name))
+                {
                 filteredNames.Add(name);
-                    
+                }
             }
-
-
-
+            PrintList(filteredNames);
 
             MyConsole.PrintL("\n\nProtien!!!");
         }
@@ -77,6 +78,32 @@ namespace cshap_project_lists_reps1
             string restLower = nameVariable.Substring(1).ToLower();
             string title = firstUpper + restLower;
             return title;
+        }
+
+        public static void PrintList(List<string> stringList)
+        {
+            foreach (string value in stringList)
+            {
+                MyConsole.Print($"{value.ToString()}, ");
+            }
+        }
+
+        public static void PrintIntList(List<int> intList)
+        {
+            foreach (int value in intList)
+            {
+                MyConsole.Print($"{value.ToString()}, ");
+            }
+        }
+
+        public static bool FilterAC(string name)
+        {
+            string firstChar = name.Substring(0, 1);
+            if (firstChar == "A" || firstChar == "C")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

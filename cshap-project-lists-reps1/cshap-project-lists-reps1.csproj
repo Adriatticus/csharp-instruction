@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="ConsoleLibrary">
-      <HintPath>..\ConsoleLibrary\bin\Debug\net8.0\ConsoleLibrary.dll</HintPath>
+      <HintPath>..\ConsoleLibrary\bin\Release\net8.0\ConsoleLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 
