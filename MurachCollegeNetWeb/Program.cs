@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using net_bmdb_web_demo.Models;
+using MurachCollegeNetWeb.Models;
 
-namespace net_bmdb_web_demo
+namespace MurachCollegeNetWeb
 {
     public class Program
     {
@@ -15,8 +15,8 @@ namespace net_bmdb_web_demo
                 opt.JsonSerializerOptions.ReferenceHandler =
                   System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
             });
-            builder.Services.AddDbContext<BMDBContextName>(
-                options => options.UseSqlServer(builder.Configuration.GetConnectionString("BmdbConnectionString"))
+            builder.Services.AddDbContext<McContext>(
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("McConnectionString"))
                 );
 
             var app = builder.Build();
