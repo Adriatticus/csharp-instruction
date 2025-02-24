@@ -9,9 +9,6 @@ namespace csharp_remidial_project_reps
         {
             MyConsole.PrintL("Welcome to my program where I get ripped doing reps\n");
 
-
-
-
             int Command = 1988;
             while (Command != 0)
             {
@@ -23,14 +20,37 @@ namespace csharp_remidial_project_reps
                         GradeConverter();
                         break;
 
+                    case 2:
+                        InterestCalculator();
+                        break;
+
                     case 0:
                         break;
 
-                            
+
                 }
 
             }
             MyConsole.PrintL("\nFeeling any faster?!?!?! Hope so");
+        }
+
+        private static void InterestCalculator()
+        {
+            MyConsole.PrintL("\nWelcome to the Interest Calculator\n");
+
+            string choice = "y";
+            while (choice == "y")
+            {
+
+                decimal loanAmount = MyConsole.PromptDecimal("\nEnter loan amount: ");
+                double interestRate = MyConsole.PromptDouble("Enter interest rate: ");
+                MyConsole.PrintL($"\nLoan amount: {loanAmount.ToString("c")}");
+                MyConsole.PrintL($"Interest rate: {interestRate.ToString("p3")}");
+                MyConsole.PrintL($"Interst: {(Convert.ToDouble(loanAmount) * interestRate).ToString("c")}\n");
+
+                choice = MyConsole.PromptStrInRange("\nContinue? (y/n): ", "y", "n");
+
+            }
         }
 
         private static void GradeConverter()
