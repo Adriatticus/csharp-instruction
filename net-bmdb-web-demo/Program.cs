@@ -15,7 +15,7 @@ namespace net_bmdb_web_demo
                 opt.JsonSerializerOptions.ReferenceHandler =
                   System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
             });
-            builder.Services.AddDbContext<BMDBContextName>(
+            builder.Services.AddDbContext<BMDBContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("BmdbConnectionString"))
                 );
 

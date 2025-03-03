@@ -13,9 +13,9 @@ namespace net_bmdb_web_demo.Controllers
     [ApiController]
     public class CreditsController : ControllerBase
     {
-        private readonly BMDBContextName _context;
+        private readonly BMDBContext _context;
 
-        public CreditsController(BMDBContextName context)
+        public CreditsController(BMDBContext context)
         {
             _context = context;
         }
@@ -24,14 +24,21 @@ namespace net_bmdb_web_demo.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Credit>>> GetCredits()
         {
-            return await _context.Credits.ToListAsync();
+            //var credits = await _context.Credits.Include(c => c.Movie)
+            //                                    .Include(c => c.Actor);
+            var credits = _context.Credits.Include(c => c.Movie)
+                                          .Include(c => c.Actor);
+            return await credits.ToListAsync();
         }
+
 
         // GET: api/Credits/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Credit>> GetCredit(int id)
         {
-            var credit = await _context.Credits.FindAsync(id);
+            var credit = await _context.Credits.Include(c => c.Movie)
+                                               .Include(c => c.Actor)
+                                               .FirstOrDefaultAsync(c => c.Id == id);
 
             if (credit == null)
             {
@@ -98,6 +105,17 @@ namespace net_bmdb_web_demo.Controllers
 
             return NoContent();
         }
+        // GET: api/Credits/movie-id/1
+        [HttpGet("movie-id/{movieId}")]
+        public async Task<ActionResult<IEnumerable<Credit>>> GetCreditsForMovie(int movieId)
+        {
+            // SELECT * FROM Credit WHERE MovieId = movieId
+            var credits = _context.Credits.Include(c => c.Movie)
+                                          .Include(c => c.Actor)
+                                          .Where(c => c.MovieId == movieId);
+            return await credits.ToListAsync();
+        }
+
 
         private bool CreditExists(int id)
         {

@@ -28,6 +28,6 @@ public partial class Movie
     [Unicode(false)]
     public string Director { get; set; } = null!;
 
-    [InverseProperty("MovieNavigation")]
+    [InverseProperty("Movie")]
     public virtual ICollection<Credit> Credits { get; set; } = new List<Credit>();
 }

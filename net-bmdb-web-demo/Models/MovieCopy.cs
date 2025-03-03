@@ -21,7 +21,7 @@ public partial class MovieCopy
 
     [StringLength(5)]
     [Unicode(false)]
-    public string? Rating { get; set; }
+    public string Rating { get; set; } = null!;
 
     [StringLength(75)]
     [Unicode(false)]

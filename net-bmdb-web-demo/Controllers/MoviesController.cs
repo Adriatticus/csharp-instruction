@@ -13,9 +13,9 @@ namespace net_bmdb_web_demo.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly BMDBContextName _context;
+        private readonly BMDBContext _context;
 
-        public MoviesController(BMDBContextName context)
+        public MoviesController(BMDBContext context)
         {
             _context = context;
         }
@@ -98,6 +98,14 @@ namespace net_bmdb_web_demo.Controllers
 
             return NoContent();
         }
+
+        // GET: api/Movies/by-rating/R
+        [HttpGet("by-rating/{rating}")]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetMoviesByRating(string rating)
+        {
+            return await _context.Movies.Where(m => m.Rating == rating).ToListAsync();
+        }
+
 
         private bool MovieExists(int id)
         {

@@ -24,11 +24,11 @@ public partial class Credit
     [Unicode(false)]
     public string Role { get; set; } = null!;
 
-    [ForeignKey("MovieId")]
-    [InverseProperty("Credits")]
-    public virtual Actor Movie { get; set; } = null!;
+    //[ForeignKey("ActorId")]
+    //[InverseProperty("Credits")]
+    public virtual Actor? Actor { get; set; } = null!;
 
-    [ForeignKey("MovieId")]
-    [InverseProperty("Credits")]
-    public virtual Movie MovieNavigation { get; set; } = null!;
+    //[ForeignKey("MovieId")]
+    //[InverseProperty("Credits")]
+    public virtual Movie? Movie { get; set; } = null!;
 }

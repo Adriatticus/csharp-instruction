@@ -13,9 +13,9 @@ namespace net_bmdb_web_demo.Controllers
     [ApiController]
     public class ActorsController : ControllerBase
     {
-        private readonly BMDBContextName _context;
+        private readonly BMDBContext _context;
 
-        public ActorsController(BMDBContextName context)
+        public ActorsController(BMDBContext context)
         {
             _context = context;
         }

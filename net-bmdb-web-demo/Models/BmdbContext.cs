@@ -4,10 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace net_bmdb_web_demo.Models;
 
-public partial class BMDBContext : DbContext
+public partial class BmdbContext : DbContext
 {
+    public BmdbContext()
+    {
+    }
 
-    public BMDBContext(DbContextOptions<BMDBContext> options)
+    public BmdbContext(DbContextOptions<BmdbContext> options)
         : base(options)
     {
     }
@@ -17,7 +20,4 @@ public partial class BMDBContext : DbContext
     public virtual DbSet<Credit> Credits { get; set; }
 
     public virtual DbSet<Movie> Movies { get; set; }
-
-    public virtual DbSet<MovieCopy> MovieCopies { get; set; }
-
 }

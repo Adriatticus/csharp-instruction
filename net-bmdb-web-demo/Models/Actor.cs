@@ -28,6 +28,6 @@ public partial class Actor
 
     public DateOnly BirthDate { get; set; }
 
-    [InverseProperty("Movie")]
+    [InverseProperty("Actor")]
     public virtual ICollection<Credit> Credits { get; set; } = new List<Credit>();
 }
